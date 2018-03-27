@@ -18,18 +18,22 @@
       </div>
       <div class="top-bar-right">
         <ul class="menu">
-            <li><a href="#" v-on:click="openInfo()">Info</a></li>
+            <li><a href="#" v-on:click="openInfo()">Information/Help</a></li>
         </ul>
       </div>
     </div>
     <div class="grid-container">
         <div class="reveal" id="infoModal" data-reveal>
-            <h1>Awesome. I Have It.</h1>
-            <p class="lead">Your couch. It is mine.</p>
-            <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+            <p class="lead">Welcome to team 2172's scouting system. Please read the important info below.</p>
+            <p>This imformation needs to be added!!!!!!</p>
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">&times;</span>
             </button>
+          </div>
+
+          <div class="reveal" id="loadingModal" data-reveal>
+              <h1>Thanks for your data!</h1>
+              <p class="lead">Please wait while the trained monkeys write it down...</p>
           </div>
 
       <div class="grid-x grid-margin-x">
@@ -48,8 +52,8 @@
         <fieldset class="cell">
           <legend>Drivertation:</legend>
           <input type="radio" name="drivestation" value="Red 1" id="red1" required v-model="Driverstation"><label for="red1">Red 1 </label>
-          <input type="radio" name="drivestation" value="Red 2" id="red2" required><label for="red2" v-model="Driverstation">Red 2 </label>
-          <input type="radio" name="drivestation" value="Red 3" id="red3" required><label for="red3" v-model="Driverstation">Red 3 </label>
+          <input type="radio" name="drivestation" value="Red 2" id="red2" required v-model="Driverstation"><label for="red2" >Red 2 </label>
+          <input type="radio" name="drivestation" value="Red 3" id="red3" required v-model="Driverstation"><label for="red3">Red 3 </label>
         </fieldset>
         <fieldset class="cell">
           <input type="radio" name="drivestation" value="Blue 1" id="blue1" required v-model="Driverstation"><label for="blue1">Blue 1</label>
