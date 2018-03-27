@@ -67,7 +67,8 @@ var app = new Vue({
                 $('#loadingModal').foundation('close');
               }).catch(function (error) {
                 console.log(error);
-                alert("Error! Something went wrong.")
+                alert("Error! Something went wrong.");
+                alert(error.message);
               });;
         },
         openInfo: function(){
