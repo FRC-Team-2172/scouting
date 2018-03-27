@@ -65,7 +65,10 @@ var app = new Vue({
                 console.log(r);
                 app.resetData();
                 $('#loadingModal').foundation('close');
-              });
+              }).catch(function (error) {
+                console.log(error);
+                alert("Error! Something went wrong.")
+              });;
         },
         openInfo: function(){
             $('#infoModal').foundation('open');

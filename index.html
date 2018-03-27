@@ -24,16 +24,38 @@
     </div>
     <div class="grid-container">
         <div class="reveal" id="infoModal" data-reveal>
-            <p class="lead">Welcome to team 2172's scouting system. Please read the important info below.</p>
-            <p>This imformation needs to be added!!!!!!</p>
+            <p class="lead"><b>Scouts, please read the important info below!</b></p>
+            <p>Good scouting data is important to help make our team a valuable alliance partner and is critical in alliance selection. There are a few important things to keep in mind while scoutiong to insure that your data gets to the right place.</p>
+            <br>
+            <p><b>Accuracy of Match Number, Team Number, and Driverstation:</b></p>
+            <p>If you do not accuratly input match number, team number, or driverstation your data will not be able to be analyzed by the scouting system. Per each match only one team can be assigned to each driverstation. Please refer to the field map below as a refrance for which driverstation is which.</p>
+            <center>
+              <img src="img/field.svg">
+            </center>
+            <p><b>Note! The driverstation a robot is lined up in front of is not always the driverstation a team is driving from. Be sure to mark down which station the team's drivers are behind.</b></p>
+            <br>
+            <p><b>Powerups:</b></p>
+            <p>While scouting mark down whichever powerups are activated by the alliance your assigned team is on. For example if you are scouting a robot on the red alliance and the red alliance levitate is activated mark down levitate as activated nomatter which team the human player is from. Symbols on the scorebaord denote which powerups have been activated by each alliance. Be sure your scouting form matches the scoreboard before you click the button to move on to the next match.</p>
+            <br>
+            <p><b>Near/Far Switches:</b></p>
+            <p>Our scouting tracks seperatly the number of cubes placed by each team in their near/far switches. The near switch is the switch closest to the driverstation a team is driving from. Ex: The switch on the blue side of the field is the near switch for the blue alliance and is the far switch for the red alliance.</p>
+            <br>
+            <p><b>Robot Climbs:</b></p>
+            <p>Only mark a successful robot climb if your robot is the one climbing. If another robot is lifting your robot up off the ground do not mark your robot with a successful climb even if it is scored.</p>
+            <br>
+            <p><b>Anything Else:</b></p>
+            <p>If you have any other questions or concerns about the scouting system or if any errors popup please go to David Paluki. <b>Most importantly, SCOUTING MATTERS, so scout well, get good data, and don't miss matches!</b></p>
             <button class="close-button" data-close aria-label="Close modal" type="button">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
 
           <div class="reveal" id="loadingModal" data-reveal>
-              <h1>Thanks for your data!</h1>
+              <h1><b>Thanks for your data!</b></h1>
               <p class="lead">Please wait while the trained monkeys write it down...</p>
+              <center>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTrqNJPW6lc0jY0qLbdFGZUjxSLyZhjBKHxPSuqyxpmVBwhjXDWA">
+              </center> 
           </div>
 
       <div class="grid-x grid-margin-x">
@@ -50,7 +72,7 @@
           </label>
         </div>
         <fieldset class="cell">
-          <legend>Drivertation:</legend>
+          <legend>Driverstation:</legend>
           <input type="radio" name="drivestation" value="Red 1" id="red1" required v-model="Driverstation"><label for="red1">Red 1 </label>
           <input type="radio" name="drivestation" value="Red 2" id="red2" required v-model="Driverstation"><label for="red2" >Red 2 </label>
           <input type="radio" name="drivestation" value="Red 3" id="red3" required v-model="Driverstation"><label for="red3">Red 3 </label>
@@ -60,6 +82,7 @@
           <input type="radio" name="drivestation" value="Blue 2" id="blue2" required v-model="Driverstation"><label for="blue2">Blue 2</label>
           <input type="radio" name="drivestation" value="Blue 3" id="blue3" required v-model="Driverstation"><label for="blue3">Blue 3</label>
         </fieldset>
+        
         <fieldset class="cell">
           <legend>Auto Line Crossed:</legend>
           <input type="radio" name="autolinecrossed" value="true" id="autolinecrossedyes" required v-model="Auto_Line_Crossed"><label for="autolinecrossedyes">Yes</label>
