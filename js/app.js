@@ -39,35 +39,26 @@ var app = new Vue({
     methods: {
         nextMatch: function(){
             var vm = this;
-            axios.post('https://script.google.com/macros/s/AKfycbwUtqbRS1Z6puYSPXX8CwfHcggOC_tMU_hVVuykZG7CXcYRCYzc/exec', {
-                Match_Number: vm.Match_Number,
-                Team_Number: vm.Team_Number,
-                Driverstation: vm.Driverstation,
-                Auto_Line_Crossed: vm.Auto_Line_Crossed,
-                Auto_Cubes_to_Switch: vm.Auto_Cubes_to_Switch,
-                Auto_Cubes_to_Scale: vm.Auto_Cubes_to_Scale,
-                Teleop_Cubes_to_Vault: vm.Teleop_Cubes_to_Vault,
-                Teleop_Cubes_to_Near_Switch: vm.Teleop_Cubes_to_Near_Switch,
-                Teleop_Cubes_to_Far_Switch: vm.Teleop_Cubes_to_Far_Switch,
-                Teleop_Cubes_to_Scale: vm.Teleop_Cubes_to_Scale,
-                Robot_Climbed: vm.Robot_Climbed,
-                Force_Activated: vm.Force_Activated,
-                Boost_Activated: vm.Boost_Activated,
-                Levitate_Activated: vm.Levitate_Activated,
-                Alliance_Score: vm.Alliance_Score
-              })
-              .then(function (response) {
-                vm.Match_Number = "00";
-                vm.Team_Number = "0000";
-                vm.Driverstation = "";
-                vm.Auto_Line_Crossed = "";
-                vm.Auto_Cubes_to_Switch = "0";
-                vm.Auto_Cubes_to_Scale = "0";
-                vm.Teleop_Cubes_to_Vault = "0";
-              })
-              .catch(function (error) {
-                console.log(error);
-                alert("Oops! Something went wrong.")
+            axios({
+                method: 'post',
+                url: 'https://script.google.com/macros/s/AKfycbwUtqbRS1Z6puYSPXX8CwfHcggOC_tMU_hVVuykZG7CXcYRCYzc/exec',
+                data: {
+                    Match_Number: vm.Match_Number,
+                    Team_Number: vm.Team_Number,
+                    Driverstation: vm.Driverstation,
+                    Auto_Line_Crossed: vm.Auto_Line_Crossed,
+                    Auto_Cubes_to_Switch: vm.Auto_Cubes_to_Switch,
+                    Auto_Cubes_to_Scale: vm.Auto_Cubes_to_Scale,
+                    Teleop_Cubes_to_Vault: vm.Teleop_Cubes_to_Vault,
+                    Teleop_Cubes_to_Near_Switch: vm.Teleop_Cubes_to_Near_Switch,
+                    Teleop_Cubes_to_Far_Switch: vm.Teleop_Cubes_to_Far_Switch,
+                    Teleop_Cubes_to_Scale: vm.Teleop_Cubes_to_Scale,
+                    Robot_Climbed: vm.Robot_Climbed,
+                    Force_Activated: vm.Force_Activated,
+                    Boost_Activated: vm.Boost_Activated,
+                    Levitate_Activated: vm.Levitate_Activated,
+                    Alliance_Score: vm.Alliance_Score
+                }
               });
         },
         openInfo: function(){
@@ -78,3 +69,5 @@ var app = new Vue({
         $('#infoModal').foundation('open');
     }
 });
+
+
