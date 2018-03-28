@@ -91,11 +91,8 @@ var app = new Vue({
             this.Levitate_Activated = false;
             this.Alliance_Score = "0";
         },
-        breakEverything: function(){
-            var Loopcount = 0;
-            while(1===1) {
-                Loopcount++;
-            }
+        displayData: function(){
+            $('#dataModal').foundation('open');
         }
     },
     mounted: function(){
