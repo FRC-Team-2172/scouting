@@ -90,6 +90,12 @@ var app = new Vue({
             this.Boost_Activated = false;
             this.Levitate_Activated = false;
             this.Alliance_Score = "0";
+        },
+        breakEverything: function(){
+            var Loopcount = 0;
+            while(1===1) {
+                Loopcount++;
+            }
         }
     },
     mounted: function(){
