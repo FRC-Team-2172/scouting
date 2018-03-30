@@ -59,7 +59,7 @@ var app = new Vue({
             
             axios({
                 method: 'post',
-                url: 'https://thingproxy.freeboard.io/fetch/https://script.google.com/macros/s/AKfycbwUtqbRS1Z6puYSPXX8CwfHcggOC_tMU_hVVuykZG7CXcYRCYzc/exec',
+                url: 'https://thingproxy.freeboard.io/fetch/https://script.google.com/macros/s/AKfycbwUtqbRS1Z6puYSPXX8CwfHcggOC_tMU_hVVuykZG7CXcYRCYzc/exec' + '?nocache=' + new Date().getTime(),
                 data: bodyFormData
               }).then(function(r){
                 console.log(r);
