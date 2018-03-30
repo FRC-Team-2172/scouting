@@ -41,22 +41,22 @@ var app = new Vue({
             var vm = this;
             $('#loadingModal').foundation('open');
             var bodyFormData = new FormData();
-            bodyFormData.set('Match_Number', vm.Match_Number);
-            bodyFormData.set('Team_Number', vm.Team_Number);
-            bodyFormData.set('Driverstation', vm.Driverstation);
-            bodyFormData.set('Auto_Line_Crossed', vm.Auto_Line_Crossed);
-            bodyFormData.set('Auto_Cubes_to_Switch', vm.Auto_Cubes_to_Switch);
-            bodyFormData.set('Auto_Cubes_to_Scale', vm.Auto_Cubes_to_Scale);
-            bodyFormData.set('Teleop_Cubes_to_Vault', vm.Teleop_Cubes_to_Vault);
-            bodyFormData.set('Teleop_Cubes_to_Near_Switch', vm.Teleop_Cubes_to_Near_Switch);
-            bodyFormData.set('Teleop_Cubes_to_Far_Switch', vm.Teleop_Cubes_to_Far_Switch);
-            bodyFormData.set('Teleop_Cubes_to_Scale', vm.Teleop_Cubes_to_Scale);
-            bodyFormData.set('Robot_Climbed', vm.Robot_Climbed);
-            bodyFormData.set('Force_Activated', vm.Force_Activated);
-            bodyFormData.set('Boost_Activated', vm.Boost_Activated);
-            bodyFormData.set('Levitate_Activated', vm.Levitate_Activated);
-            bodyFormData.set('Alliance_Score', vm.Alliance_Score);
-            
+            bodyFormData.append('Match_Number', vm.Match_Number);
+            bodyFormData.append('Team_Number', vm.Team_Number);
+            bodyFormData.append('Driverstation', vm.Driverstation);
+            bodyFormData.append('Auto_Line_Crossed', vm.Auto_Line_Crossed);
+            bodyFormData.append('Auto_Cubes_to_Switch', vm.Auto_Cubes_to_Switch);
+            bodyFormData.append('Auto_Cubes_to_Scale', vm.Auto_Cubes_to_Scale);
+            bodyFormData.append('Teleop_Cubes_to_Vault', vm.Teleop_Cubes_to_Vault);
+            bodyFormData.append('Teleop_Cubes_to_Near_Switch', vm.Teleop_Cubes_to_Near_Switch);
+            bodyFormData.append('Teleop_Cubes_to_Far_Switch', vm.Teleop_Cubes_to_Far_Switch);
+            bodyFormData.append('Teleop_Cubes_to_Scale', vm.Teleop_Cubes_to_Scale);
+            bodyFormData.append('Robot_Climbed', vm.Robot_Climbed);
+            bodyFormData.append('Force_Activated', vm.Force_Activated);
+            bodyFormData.append('Boost_Activated', vm.Boost_Activated);
+            bodyFormData.append('Levitate_Activated', vm.Levitate_Activated);
+            bodyFormData.append('Alliance_Score', vm.Alliance_Score);
+
             axios({
                 method: 'post',
                 url: 'https://thingproxy.freeboard.io/fetch/https://script.google.com/macros/s/AKfycbwUtqbRS1Z6puYSPXX8CwfHcggOC_tMU_hVVuykZG7CXcYRCYzc/exec' + '?nocache=' + new Date().getTime(),
